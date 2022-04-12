@@ -84,17 +84,16 @@ header .header-content {
   -o-transition: transform 0.2s;
 }
 
-.header-content nav ul li .link-item:before{
+.header-content nav ul li .link-item:before {
   border-width: 0 3px;
   height: 100%;
-  width:95%;
+  width: 95%;
   transform: scale3d(1, 0, 1);
   -webkit-transform: scale3d(1, 0, 1);
   -moz-transform: scale3d(1, 0, 1);
   -ms-transform: scale3d(1, 0, 1);
   -o-transform: scale3d(1, 0, 1);
 }
-
 
 .header-content nav ul li .link-item:hover:before {
   transform: scale3d(1, 1, 1);
@@ -104,15 +103,15 @@ header .header-content {
   -o-transform: scale3d(1, 1, 1);
 }
 
-.header-content nav ul li .link-item:after{
+.header-content nav ul li .link-item:after {
   border-width: 3px 0;
   width: 100%;
   height: 91%;
-  transform: scale3d(0, 1 , 1);
-  -webkit-transform: scale3d(0, 1 , 1);
-  -moz-transform: scale3d(0, 1 , 1);
-  -ms-transform: scale3d(0, 1 , 1);
-  -o-transform: scale3d(0, 1 , 1);
+  transform: scale3d(0, 1, 1);
+  -webkit-transform: scale3d(0, 1, 1);
+  -moz-transform: scale3d(0, 1, 1);
+  -ms-transform: scale3d(0, 1, 1);
+  -o-transform: scale3d(0, 1, 1);
   transform-origin: left;
 }
 
@@ -151,6 +150,59 @@ header .header-content {
   font-size: 13px;
 }
 /* End Header */
+
+/* Start Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 450px;
+  border: 2px solid var(--mainColor);
+  padding: 15px;
+  margin-top: 5px;
+  background: #fff;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transition: transform 0.5s, visibility 0.5s;
+  -webkit-transition: transform 0.5s, visibility 0.5s;
+  -moz-transition: transform 0.5s, visibility 0.5s;
+  -ms-transition: transform 0.5s, visibility 0.5s;
+  -o-transition: transform 0.5s, visibility 0.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown-menu ul {
+  display: table-cell;
+  text-align: left;
+
+}
+
+.dropdown-menu ul li:first-child a{
+  display: block;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted var(--mainColor);
+}
+
+.dropdown-menu ul li {
+  line-height: 1.7;
+}
+/* End Dropdown */
 
 /* Start Slider */
 section.slider img {
